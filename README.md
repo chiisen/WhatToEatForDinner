@@ -1,6 +1,9 @@
 # WhatToEatForDinner
 What to eat for dinner
 
+![D01](/images/D01.png)
+
+一個簡單且互動的網頁工具，幫助使用者在多種晚餐選項中隨機抽籤，解決每天晚餐不知道吃什麼的煩惱。頁面友好簡潔，操作方便，適合日常使用。
 
 ## 安裝
 ```bash
@@ -21,3 +24,4 @@ $Env:GEMINI_API_KEY = 'A-------------------------------------k'
 ```bash
 gemini
 ```
+
