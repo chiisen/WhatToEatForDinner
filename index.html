@@ -24,13 +24,27 @@
         </section>
 
         <section class="card-glass px-6 py-8">
-            <div id="result" class="result text-3xl font-semibold text-center py-8 rounded-[--radius-lg] border border-slate-700/60 bg-black/10"></div>
+            <div id="result" role="status" aria-live="polite" class="result text-3xl font-semibold text-center py-8 rounded-[--radius-lg] border border-slate-700/60 bg-black/10">按下開始抽籤</div>
             <div class="mt-6 flex items-center justify-center gap-4">
                 <button id="start" class="btn-primary">開始抽籤</button>
-                <button id="stop" class="btn-outline">停止抽籤</button>
+                <button id="stop" class="btn-outline" disabled>停止抽籤</button>
             </div>
         </section>
+        <section class="card-glass menu-editor" aria-labelledby="menu-title">
+            <h2 id="menu-title">我的餐點清單</h2>
+            <p>新增喜歡的餐點，或刪除今天不想吃的選項。清單只保存在這個瀏覽器。</p>
+            <form id="menu-form">
+                <label for="menu-input">餐點名稱</label>
+                <div class="menu-entry">
+                    <input id="menu-input" name="dinner" type="text" autocomplete="off" required>
+                    <button class="btn-primary" type="submit">新增餐點</button>
+                </div>
+            </form>
+            <p id="menu-status" role="status" aria-live="polite"></p>
+            <ul id="menu-list" aria-label="抽籤餐點"></ul>
+        </section>
     </main>
+    <script src="menu.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -56,6 +56,22 @@
 }
 
 @layer components {
+  button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .result { overflow-wrap: anywhere; }
+  .menu-editor { margin: 1.5rem 0 3rem; padding: 1.5rem; }
+  .menu-editor h2 { font-size: 1.5rem; font-weight: 600; }
+  .menu-editor p { margin: 0.75rem 0; color: var(--color-text-muted); }
+  .menu-entry { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+  .menu-entry input {
+    flex: 1; min-width: 0; width: 100%; padding: 0.625rem;
+    background: var(--color-bg); color: var(--color-text);
+    border: 1px solid var(--color-text-muted); border-radius: var(--radius-md);
+  }
+  .menu-entry input:focus-visible { outline: 2px solid var(--color-accent); }
+  #menu-list { padding: 0; list-style: none; }
+  #menu-list li { display: flex; align-items: center; gap: 1rem; margin-top: 0.75rem; }
+  #menu-list li span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  #menu-list button { flex-shrink: 0; }
   .btn-primary {
     display: inline-flex;
     align-items: center;
